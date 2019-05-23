@@ -39,7 +39,23 @@ namespace GraZgadywanka
                 string tekst = Console.ReadLine();
                 //  Console.WriteLine($"podałeś tekst {tekst}");
 
-                int propozycja = Convert.ToInt32(tekst);
+                int propozycja; 
+                try
+                { 
+                     propozycja = Convert.ToInt32(tekst);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Nie dodałes liczby, sprój jeszcze raz");
+                    licznikRuchow++;
+                    continue;
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine($"Podana liczba wykracza poza zakres od {int.MinValue} do {int.MaxValue}, sprój jeszcze raz");
+                    licznikRuchow++;
+                    continue;
+                }
                 #endregion
 
 
