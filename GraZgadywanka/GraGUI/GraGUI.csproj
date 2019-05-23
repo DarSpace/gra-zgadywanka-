@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogikaGry\LogikaGry.csproj">
+      <Project>{3e520648-e8c5-4813-a535-44a850385b98}</Project>
+      <Name>LogikaGry</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
