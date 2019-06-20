@@ -65,16 +65,28 @@ namespace GraGUI
                 return;
             }
 
+            else
+            {
+                textBoxZakresMin.BackColor = Color.Green;
+            }
+
+
             int b;
             if (!int.TryParse(textBoxZakresMax.Text, out b))
             {
                 textBoxZakresMin.BackColor = Color.Red;
                 return;
             }
+            else
+            {
+                textBoxZakresMax.BackColor = Color.LightGreen;
+            }
 
-        }
+            g = new Gra(a, b);
+            groupBoxLosowanie.Enabled = false;
+            groupBoxPropozycja.Visible = true;
 
-        private int wczytajLiczbe(TextBox poleTekstowe)
+            private int wczytajLiczbe(TextBox poleTekstowe)
         {
 
 
